@@ -1,0 +1,48 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment variables & secrets (NEVER commit secrets!)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Local runtime logs & audit data
+audit.jsonl
+*.log
+
+# Memory service local databases & artifact storage
+memory-data/
+*.sqlite3
+*.db
+
+# Obsidian local cache & chat logs (user runtime data)
+MCP Memory/.obsidian/
+MCP Memory/Chats/
+MCP Memory/Untitled.md
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & Editor caches
+.idea/
+.vscode/
+.claude/
+.gemini/
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
