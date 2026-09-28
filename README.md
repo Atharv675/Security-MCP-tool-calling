@@ -33,18 +33,18 @@ mcp-security-toolkit/
 │   ├── security_specialist.py       # A2A server: wraps MCP tools as skills
 │   ├── report_writer_specialist.py  # A2A server: findings -> structured report
 │   └── orchestrator.py              # front-facing triage agent, delegates over A2A
-├── memory/                          # ✨ NEW — dual-layer persistent memory system
+├── memory/                          #  NEW — dual-layer persistent memory system
 │   ├── __init__.py                  # re-exports build_chat_memory / build_agent_memory
 │   ├── settings.py                  # environment-configured factory functions
 │   ├── chat_memory.py               # ChatMemoryService: Redis + ObsidianVault
 │   ├── agent_memory.py              # AgentMemoryService: Redis + Cognee + SQLite + artifacts
 │   ├── redis_store.py               # Redis async adapter with TTL and bounded lists
-│   └── cognee_setup.py              # ✨ NEW — configure Cognee with Gemini key + storage path
-├── MCP Memory/                      # ✨ NEW — Obsidian vault (chat memory store)
+│   └── cognee_setup.py              #  NEW — configure Cognee with Gemini key + storage path
+├── MCP Memory/                      #  NEW — Obsidian vault (chat memory store)
 │   ├── .obsidian/                   # Obsidian app configuration (auto-managed)
 │   ├── Chats/                       # auto-created: one .md file per conversation
 │   └── Knowledge/                   # auto-created: manually curated fact notes
-├── memory-data/                     # ✨ NEW — runtime data (git-ignored)
+├── memory-data/                     #  NEW — runtime data (git-ignored)
 │   ├── cognee/                      # Cognee graph/vector/relational databases
 │   ├── executions.sqlite3           # structured agent execution records
 │   └── artifacts/                   # SHA-256 content-addressed JSON tool outputs
@@ -53,9 +53,9 @@ mcp-security-toolkit/
 │   ├── test_auth.py
 │   ├── test_multi_server.py
 │   ├── test_a2a_pipeline.py
-│   └── test_memory_architecture.py  # ✨ NEW — memory layer architecture tests
-├── import_history_to_obsidian.py    # ✨ NEW — migrate audit.jsonl history to Obsidian
-├── docker-compose.memory.yml        # ✨ NEW — Redis, PostgreSQL, MinIO services
+│   └── test_memory_architecture.py  #  NEW — memory layer architecture tests
+├── import_history_to_obsidian.py    #  NEW — migrate audit.jsonl history to Obsidian
+├── docker-compose.memory.yml        #  NEW — Redis, PostgreSQL, MinIO services
 ├── requirements.txt
 ├── .env.example
 └── README.md
